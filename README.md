@@ -4,7 +4,7 @@
 
 The objective for this challenge is to convert a small set of data from CSV format into a database, mapping the data according to the given specifications.
 
-Only map data that is directly available of target, skipping all that is unneeded.
+Only map data that is directly available on target, skipping all that is unneeded.
 
 ## Contents
 
