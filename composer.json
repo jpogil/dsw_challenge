@@ -1,0 +1,16 @@
+{
+    "require": {
+        "php": "^8.0",
+        "monolog/monolog": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Src\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    }
+}

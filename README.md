@@ -4,40 +4,86 @@
 
 The objective for this challenge is to convert a small set of data from CSV format into a database, mapping the data according to the given specifications.
 
-Only map data that is directly available of target, skipping all that is unneeded.
+Read everything properly and try your 
 
-## Contents
+## Relevant Contents
 
-`data` - folder containing the CSV files to convert
+`data` - folder containing the CSV files to read and convert
 
-`specs` - specifications for the target format
+`specs` - specifications for the data format to store in database
 
-`README.md` - instructions on how to compete this challenge
+`src`- all your code should be placed in this folder
 
-## Requirements
+`tests`- folder for the tests
+
+`convert.php` - command to start the conversion
+
+## Instructions
 
 1. Clone this repository and develop the solution in your own repository
 
-2. You should setup a Docker configuration so that we can run the conversion directly from the CLI. This involves installing all the required libraries, creating database structure, etc. It should be ready to use with a couple of commands.
+2. Install Docker in your machine
 
-3. Document the components you used and how can we run your application
+3. Build and run the Docker instances with:
 
-4. Use PHP (It can be vanilla, external packages or a framework)
+    `docker-compose up -d --build`
 
-5. You can use Mongodb, MySQL, SQLite, etc for database but you must provide instructions on how to check the end result
+4. Wait for it...
 
-6. Without over engineering use SOLID principles and OOP best practices (interfaces, models, strategies, mappers, etc)
+5. After the instances are setup you can run commands using:
+
+    `docker-compose run --rm console <command>`
+
+6. Lets run composer update for example:
+
+    `docker-compose run --rm console composer update`
+
+7. Your code should be placed in the /src folder
+
+8. Open `converter.php` and call your code there
+
+9. You can run the converter with
+
+    `docker-compose run --rm console php convert.php`
+
+10. Monolog is available and logs are stored in `app.log`. Use it at will.
+
+11. Good luck!
+
+## Requirements
+
+1. Don't reinvent the wheel. Feel free to install whatever packages you might require.
+
+2. Use an ORM or ODM to access Mongodb.
+
+    We recommend Xenus but choose your prefered one from:
+
+    <https://docs.mongodb.com/drivers/php-libraries/>
+
+3. Be pragmatic in your approach.
+
+4. Without over engineering use SOLID principles and OOP best practices to organize your code (interfaces, abstracts, models, strategies, mappers, etc).
+
+5. Only map data that is directly available on target, skipping all that is unneeded.
+
+6. Challenge is complete if we see all data correctly stored in Mongodb collections according to the `specs`
 
 ## Bonus
 
-The following will be highly valued in your application
+The following is OPTIONAL but will be highly valued in your application
 
-1. Add the current balance to the accounts. Feel free to explore the data and to find that info.
+1. Add the current balance to the accounts. Feel free to explore the data to find that info.
 
 2. Change the type of transactions that are invoices. Feel free to explore the data to find that info.
 
 3. Use a TDD approach to your solution
 
-## Get started
+## OTHER INFO
 
-Good luck!
+### Mongodb connection for your app
+
+`mongodb://dsw_challenge_mongodb:27018/dataswitcher`
+
+You can use Robo 3T <https://robomongo.org/> to check your work
+
+Use localhost:27018 for connection.
