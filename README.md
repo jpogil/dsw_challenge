@@ -4,7 +4,7 @@
 
 The objective for this challenge is to convert a small set of data from CSV format into a database, mapping the data according to the given specifications.
 
-Read everything properly and try your 
+Read everything properly. Proper analysis of requirements and data is half the work.
 
 ## Relevant Contents
 
