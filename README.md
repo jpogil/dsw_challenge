@@ -62,7 +62,7 @@ Read everything properly. Proper analysis of requirements and data is half the w
 
 3. Be pragmatic in your approach.
 
-4. Without over engineering use SOLID principles and OOP best practices to organize your code (interfaces, abstracts, models, strategies, mappers, etc).
+4. Without over engineering use SOLID principles and OOP best practices to organize your code (interfaces, abstracts, models, etc).
 
 5. Only map data that is directly available on target, skipping all that is unneeded.
 
