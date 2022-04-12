@@ -1,4 +1,4 @@
-Specs for target collections
+Specifications for target collections and respective columns
 
 [accounts]
 name (string) - name of account

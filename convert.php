@@ -15,5 +15,5 @@ $log->info('Running Conversion');
 
 // END YOUR CALL HERE
 
-$log->info('Conversion Finished');
-echo "\n Conversion Finished! \n";
+$log->info('Ended Conversion');
+echo "\nConversion Finished!\n";

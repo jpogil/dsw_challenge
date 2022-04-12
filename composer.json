@@ -1,7 +1,8 @@
 {
     "require": {
         "php": "^8.0",
-        "monolog/monolog": "*"
+        "monolog/monolog": "*",
+        "phpunit/phpunit": "^9.5"
     },
     "autoload": {
         "psr-4": {

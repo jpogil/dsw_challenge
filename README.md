@@ -46,9 +46,13 @@ Read everything properly. Proper analysis of requirements and data is half the w
 
     `docker-compose run --rm console php convert.php`
 
-10. Monolog is available and logs are stored in `app.log`. Use it at will.
+10. You can run tests with
 
-11. Good luck!
+    `docker-compose run --rm console ./vendor/bin/phpunit tests`
+
+11. Monolog is available and logs are stored in `app.log`. Use it at will.
+
+12. Good luck!
 
 ## Requirements
 
@@ -60,23 +64,23 @@ Read everything properly. Proper analysis of requirements and data is half the w
 
     <https://docs.mongodb.com/drivers/php-libraries/>
 
-3. Be pragmatic in your approach.
+3. Be pragmatic in your approach while keeping an eye on SOLID principles.
 
-4. Without over engineering use SOLID principles and OOP best practices to organize your code (interfaces, abstracts, models, strategies, mappers, etc).
+4. Without over engineering use OOP best practices to organize your code (interfaces, abstracts, models, etc).
 
-5. Only map data that is directly available on target, skipping all that is unneeded.
+5. Write at least some basic unit tests for your solution.
 
-6. Challenge is complete if we see all data correctly stored in Mongodb collections according to the `specs`
+6. Only map data that is directly available on target, skipping all that is unneeded.
+
+7. Challenge is complete if we see all data correctly stored in Mongodb collections according to the `specs`
 
 ## Bonus
 
 The following is OPTIONAL but will be highly valued in your application
 
-1. Add the current balance to the accounts. Feel free to explore the data to find that info.
+1. Change the type of transactions that are invoices. Feel free to explore the data to find that info.
 
-2. Change the type of transactions that are invoices. Feel free to explore the data to find that info.
-
-3. Use a TDD approach to your solution
+2. Add the current balance to the accounts. Feel free to explore the data to find that info.
 
 ## OTHER INFO
 
