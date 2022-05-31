@@ -13,11 +13,11 @@ type (string) - type of data company uses
 
 [transactions]
 ref (int) - unique id for transaction or journal
-account_code (string) - accounts:code
 description (string) - description of transaction
 type (enum:J,I) - type of transaction (J - journal, I - invoice)
 
 [transactions_lines]
 transaction_ref (int) - transactions:ref
+account_code (string) - accounts:code
 debit (float) - debit amount for line
 credit (float) - credit amount for line
