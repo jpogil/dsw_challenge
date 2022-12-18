@@ -11,6 +11,8 @@ $log->info('Running Conversion');
 
 // CALL YOUR CODE HERE
 
+$importer = new \Src\Importer();
+$importer->import('data/');
 
 
 // END YOUR CALL HERE

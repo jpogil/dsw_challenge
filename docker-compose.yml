@@ -24,7 +24,7 @@ services:
     volumes:
       - mongo-data:/data/db
     ports:
-      - 27018:27017
+      - 27020:27017
     networks:
       - dsw-challenge
     command: "mongod --logpath=/dev/null"

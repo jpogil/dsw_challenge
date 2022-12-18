@@ -2,7 +2,9 @@
     "require": {
         "php": "^8.0",
         "monolog/monolog": "*",
-        "phpunit/phpunit": "^9.5"
+        "phpunit/phpunit": "^9.5",
+        "abellion/xenus": "^0.19.1",
+        "parsecsv/php-parsecsv": "^1.3"
     },
     "autoload": {
         "psr-4": {
