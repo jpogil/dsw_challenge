@@ -4,10 +4,16 @@ namespace Src\Sources\Csv;
 
 use Src\Collections\Accounts;
 use Src\Collections\CompanyInfo;
+use Src\Collections\TransactionLines;
+use Src\Collections\Transactions;
 use Src\Converters\Csv\AccountDataConverter;
 use Src\Converters\Csv\CompanyDataConverter;
+use Src\Converters\Csv\JournalDataConverter;
+use Src\Converters\Csv\JournalLineDataConverter;
 use Src\Documents\Account;
 use Src\Documents\Company;
+use Src\Documents\Transaction;
+use Src\Documents\TransactionLine;
 use Src\Sources\MappingInterface;
 
 class Mapping implements MappingInterface
@@ -19,7 +25,10 @@ class Mapping implements MappingInterface
                 return new Accounts($connection);
             case 'company.csv':
                 return new CompanyInfo($connection);
-                break;
+            case 'journals.csv':
+                return new Transactions($connection);
+            case 'journals_lines.csv':
+                return new TransactionLines($connection);
         }
     }
 
@@ -30,6 +39,10 @@ class Mapping implements MappingInterface
                 return new Account($data);
             case 'company.csv':
                 return new Company($data);
+            case 'journals.csv':
+                return new Transaction($data);
+            case 'journals_lines.csv':
+                return new TransactionLine($data);
         }
     }
 
@@ -40,6 +53,10 @@ class Mapping implements MappingInterface
                 return new AccountDataConverter();
             case 'company.csv':
                 return new CompanyDataConverter();
+            case 'journals.csv':
+                return new JournalDataConverter();
+            case 'journals_lines.csv':
+                return new JournalLineDataConverter();
         }
     }
 }
