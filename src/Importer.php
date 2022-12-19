@@ -32,8 +32,6 @@ class Importer
             foreach(glob($source.'/*.csv') as $file) {
                 $this->importFile($file);
             }
-        } elseif (is_file($source)) {
-            $this->importFile($source);
         }
     }
 
